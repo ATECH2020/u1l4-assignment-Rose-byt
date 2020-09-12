@@ -7,18 +7,15 @@ class AnalogClock {
         Scanner scanner = new Scanner(System.in);
 
         //Reads ints from user
-        int angleHour = scanner.nextInt();
-        int angleMinute = scanner.nextInt();
-
+        int hrDegree = scanner.nextInt();
+        int degreeOutput;
+        
         /*
-         *  your code goes here
+         *  Determines the angle by which the minute hand turned since the start of the    *  current hour
          */
-        int hourHand = angleHour / 720;
-        double hourDegrees = hourHand * 0.5;
-        int minuteHand = angleMinute / 60;
-        int minuteDegrees = minuteHand * 6;
-
-        System.out.print(hourDegrees +" "+ minuteDegrees);
+        degreeOutput = (hrDegree % 30) * 12;
+        System.out.print(degreeOutput);
+        
         // closing the scanner object
         scanner.close();
     }
